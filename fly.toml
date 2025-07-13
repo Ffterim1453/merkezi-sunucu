@@ -1,0 +1,12 @@
+# fly.toml file generated for merkezi-sunucu
+
+app = "ffterim-panel-sunucu" # BURAYA SEÇTİĞİN BENZERSİZ İSMİ YAZ
+primary_region = "fra" # Frankfurt (değiştirmene gerek yok)
+
+[http_service]
+  internal_port = 3000
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ["app"]
